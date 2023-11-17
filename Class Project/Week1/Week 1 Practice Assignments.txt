@@ -1,0 +1,31 @@
+************************************************
+
+1: Voting Eligibility:
+
+	Write a script that prompts the user to enter their age. Check if the entered age is 18 or above. If it is, display a message saying the user is eligible to vote. If not, display a message indicating they are not eligible yet.
+
+************************************************
+
+2: Numeric Comparison:
+
+	Create a script that asks the user to enter two numbers. Compare the numbers and display messages indicating whether the first number is greater than, less than, or equal to the second number.
+
+************************************************
+
+3: Combine First and Last Name in a CSV File:
+
+	Create a script that imports a CSV file. (Create a .csv file that contains a column with a list of First Names, and a column of Last Names). Combine the first and last name for each row and output them into a separate column.
+
+************************************************
+
+%%% BONUS %%%%
+4 Multiplication Table: (hint, for loop)
+
+	Create a script that asks the user for number. Use this number and create a multiplication table from 1-10. (Multiply the user input number with numbers 1-10, output the total on it's own line) 
+
+output example if the input number was 2:
+"2 x 1 = 2"
+"2 x 2 = 4"
+"2 x 3 = 6"
+...
+"2 x 10 = 20"
