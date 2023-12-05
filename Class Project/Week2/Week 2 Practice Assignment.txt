@@ -1,0 +1,21 @@
+************************************************
+
+1: Exam Grades (Find Letter Grade)
+
+	Write a script that determines the letter grade based off students exam score.
+	-Import the ExamGrades.csv file. (In this same folder)
+	-Create a function named "FindExamLetterGrade" with an input parameter "$examScore". Use if statements to determine the letter grade (based off range below) Return the letter grade through the function
+		90-100: A
+		80-99: B
+		70-89: C
+		60-79: D
+		0-60: F
+
+	-Loop through each row to get each students exam score. Call the FindExamLetterGrade function and pass through the ExamScore to determine the letter grade. 
+		FindExamLetterGrade -ExamScore $row.ExamGrade
+	-Based off the returned LetterGrade from the function, write that back to the CSV under the column "LetterGrade"
+
+	*Please note, you will likely have to go into the .csv file and remove the ExamScore column each time you run your script*
+	
+
+************************************************
