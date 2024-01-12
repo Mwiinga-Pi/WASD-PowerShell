@@ -38,11 +38,11 @@ function Conv-Str2Int{
 	Conv-Str2Int
 	}
 }
-function FindExamLetterGrade {
+function FindExamLetterGrade {<#  #>
 	param (
 		[string]$examScore
 	)
-	[int]$scoreEval
+	[int]$scoreEval = $null
 	try{
 		$scoreEval = [convert]::ToInt32($examScore)
 		[string]$gradeValue = ""
@@ -67,11 +67,12 @@ function FindExamLetterGrade {
 	else {
 		$gradeValue = 'N'
 	}
+	#Write-Host $gradeValue
 	}
 	catch{
 		$gradeValue = 'z'
 	}
-	
+	Write-Host $gradeValue
 	return $gradeValue
 }
 
@@ -81,7 +82,7 @@ $ogExamImport = Import-Csv -Path $ogExamGrades
 # Write-Host $ogExamImport.ExamGrade
 foreach ($row in $ogExamImport){
 	[string]$letterGrade = ""
-	$letterGrade = $(FindExamLetterGrade -examScore $row.ExamGrade)
+	$letterGrade = FindExamLetterGrade $row.ExamGrade
 	Write-Host $letterGrade
 }
 # Pause
