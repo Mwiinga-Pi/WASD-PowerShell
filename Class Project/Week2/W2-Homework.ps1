@@ -72,7 +72,7 @@ function FindExamLetterGrade {<#  #>
 	catch{
 		$gradeValue = 'z'
 	}
-	Write-Host $gradeValue
+	# Write-Host $gradeValue
 	return $gradeValue
 }
 
@@ -84,5 +84,7 @@ foreach ($row in $ogExamImport){
 	[string]$letterGrade = ""
 	$letterGrade = FindExamLetterGrade $row.ExamGrade
 	Write-Host $letterGrade
+	Add-Member -InputObject $row -MemberType NoteProperty -Name "LetterGrade" -Value $letterGrade
 }
+$ogExamImport | Export-Csv ".\exportGRADES.csv" -Delimiter ',' -NoTypeInformation
 # Pause
